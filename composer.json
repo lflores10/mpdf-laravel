@@ -18,7 +18,7 @@
                 "lflores10\\LaravelMpdf\\LaravelMpdfServiceProvider"
             ],
             "aliases": {
-                "PDF": "lflores10\\LaravelMpdf\\Facades\\LaravelMpdf"
+                "LaravelPDF": "lflores10\\LaravelMpdf\\Facades\\LaravelMpdf"
             }
         }
     }

@@ -17,7 +17,7 @@ class LaravelMpdfServiceProvider extends ServiceProvider
     public function boot()
     {
         $this->publishes([
-            __DIR__.'/../config/pdf.php' => config_path("pdf.php"),
+            __DIR__.'/../config/laravelPdf.php' => config_path("laravelPdf.php"),
         ], "mpdf-config");
     }
 
@@ -29,7 +29,7 @@ class LaravelMpdfServiceProvider extends ServiceProvider
     public function register()
     {    
         $this->mergeConfigFrom(
-            __DIR__ . '/../config/pdf.php', 'pdf'
+            __DIR__ . '/../config/laravelPdf.php', 'pdf'
         );
 
         $this->app->bind('laravel-mpdf', function ($app) {

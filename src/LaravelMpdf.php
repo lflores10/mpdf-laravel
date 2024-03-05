@@ -1,6 +1,6 @@
 <?php
 
-namespace Mccarlosen\LaravelMpdf;
+namespace lflores10\LaravelMpdf;
 
 use Mpdf\Mpdf;
 use Mpdf\Output\Destination;
@@ -17,8 +17,8 @@ class LaravelMpdf
 {
     use Macroable;
 
-    protected $mpdf;
-    protected $config = [];
+    protected Mpdf $mpdf;
+    protected mixed $config = [];
 
     public function __construct($config = [])
     {
@@ -83,7 +83,7 @@ class LaravelMpdf
 
     /**
      * Get instance mpdf
-     * @return static
+     * @return Mpdf
      */
     public function getMpdf()
     {
@@ -106,7 +106,7 @@ class LaravelMpdf
      * Save the PDF to a file
      *
      * @param $filename
-     * @return static
+     * @return string|void
      * @throws \Mpdf\MpdfException
      */
     public function save($filename)
@@ -118,7 +118,7 @@ class LaravelMpdf
      * Make the PDF downloadable by the user
      *
      * @param string $filename
-     * @return \Symfony\Component\HttpFoundation\Response
+     * @return string|void
      * @throws \Mpdf\MpdfException
      */
     public function download($filename = 'document.pdf')
@@ -130,7 +130,7 @@ class LaravelMpdf
      * Return a response with the PDF to show in the browser
      *
      * @param string $filename
-     * @return \Symfony\Component\HttpFoundation\Response
+     * @return string|void
      * @throws \Mpdf\MpdfException
      */
     public function stream($filename = 'document.pdf')

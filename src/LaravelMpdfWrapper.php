@@ -4,7 +4,7 @@ namespace lflores10\LaravelMpdf;
 
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\View;
-use Meneses\LaravelMpdf\LaravelMpdf as Pdf;
+use lflores10\LaravelMpdf\LaravelMpdf as Pdf;
 
 class LaravelMpdfWrapper
 {
